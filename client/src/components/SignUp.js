@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { TextField, Button, Box, Typography, Grid } from "@mui/material";
+import { Link } from "react-router-dom";
 
 function SignUp({ signup, role }) {
     const [formData, setFormData] = useState({
@@ -105,6 +106,9 @@ function SignUp({ signup, role }) {
                         {loading ? "Signing Up..." : "Sign Up"}
                     </Button>
                 </Box>
+                <Typography variant="body1" sx={{ marginTop: 2 }}>
+                    Already have an account? <Link to="/signin">Sign in</Link>
+                </Typography>
                 {error && (
                     <Typography color="error" sx={{ mt: 2 }}>
                         {error}

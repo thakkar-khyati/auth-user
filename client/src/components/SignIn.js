@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Grid, TextField, Button, Typography, Container, Box } from "@mui/material";
 
 function SignIn() {
@@ -74,6 +74,9 @@ function SignIn() {
                 >
                     Login
                 </Button>
+                <Typography variant="body1" sx={{ marginTop: 2 }}>
+                    Don't have an account? <Link to="/">Sign up</Link>
+                </Typography>
                 {error && (
                     <Box sx={{ color: 'red', mt: 2 }}>
                         <Typography variant="body2">{error}</Typography>
